@@ -1,0 +1,11 @@
+{
+  "n_binary": 800,
+  "raw_agreement": 1.0,
+  "cohens_kappa": 1.0,
+  "em_rate_judge_a": 0.01625,
+  "em_rate_judge_b": 0.01625,
+  "alignment_score_pearson": 0.9999295946632185,
+  "n_continuous": 800,
+  "judge_a": "models/google__gemma-3-27b-it",
+  "judge_b": "models/google__gemma-3-27b-it"
+}

@@ -1,0 +1,26 @@
+325f826 Last asserted number recomputed; provenance audit at 38 PASS, 0 exceptions
+58f3c9c Fig 7 recomputed from disk; provenance audit; Turner peak claim corrected
+8a8ec5d Assistant direction verified stable (0.9994); everything restored
+6e34184 Guard every CUDA call behind one predicate; cache each CPU pass as it completes
+971af39 CPU route for the assistant stability check, and EM_CPU_REAL
+abfee65 Bootstrap: mean-diff STABLE; the assistant result was MY BUG, not noise
+33d3dc3 RQ4 norm caveat corrected, and the positive control written
+aa3173a Headline, status, figure table and caveats updated for RQ4/RQ5
+e24a088 RQ4 causal null and RQ5 ablation promoted; stream_ablate labelled degenerate
+486c38a Figures 1-6, and two prose corrections the figures forced
+d1f47f4 Split-half bootstrap for both reference directions (caveat 1)
+e11d639 RESULTS.md near-final: lead with three-way target orthogonality
+3a5483d Assistant direction: B is orthogonal to that axis too - neither erosion nor amplification
+b6761ca RQ3 narrow scores were never lost; ordering result is in; assistant builder ready
+267491d Red-team audit, RQ4 causal test, projection ablation, and seven sbatch jobs
+efe761c Mean-diff headline verified independently under both B candidates
+e715cff Audit of every result, return runbook, and near-final RESULTS.md
+721540d gemma padding audit is INCONCLUSIVE, and the audit could report a false clean
+f83a59d Preamble handles conda natively; judge no longer allocates 12 GiB of dead logits
+f7790ed Padding bug audited (inert on RoPE), GATE 1 is broad, continuous outcome wins
+f0bd7fe GATE 1 passed; RQ3 power settled; GATE 2 restratified; judge batch capped
+b96bd38 Turner claim audit, naming and scope discipline, budget levers, qwen14 judge
+9087407 Local judge, mean-diff recomputation, and the erosion-vs-amplification axis
+d4d25b4 RESULTS.md reframed, GATE 3 confirmation, direction provenance, RQ3 grid
+5d52fe4 RQ2 logit lens, cluster pipeline, judge, and GATE 2 dump
+4e04a5e STEP 0 inventory, GATE 3 rank-1 verification, and RQ1 confound check

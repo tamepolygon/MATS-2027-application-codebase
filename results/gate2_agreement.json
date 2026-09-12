@@ -1,0 +1,43 @@
+{
+  "n": 27,
+  "raw_agreement_on_sample": 0.7407407407407407,
+  "cohens_kappa": 0.5141388174807197,
+  "tp": 10,
+  "fp": 0,
+  "fn": 7,
+  "tn": 10,
+  "precision": 1.0,
+  "recall": 0.5882352941176471,
+  "per_stratum": {
+    "em": {
+      "n": 10,
+      "agreement": 1.0,
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "population_weight": 0.01625
+    },
+    "boundary": {
+      "n": 7,
+      "agreement": 0.14285714285714285,
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "tn": 1,
+      "population_weight": 0.00875
+    },
+    "aligned": {
+      "n": 10,
+      "agreement": 0.9,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "tn": 9,
+      "population_weight": 0.97375
+    }
+  },
+  "reweighted_population_agreement": 0.8949937421777221,
+  "sample_is_enriched": true,
+  "judge_model": "models/google__gemma-3-27b-it"
+}

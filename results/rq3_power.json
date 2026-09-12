@@ -1,0 +1,421 @@
+{
+  "gate1_input": {
+    "n": 400,
+    "k_misaligned": 13,
+    "rate": 0.0325,
+    "base_n": 400,
+    "base_k": 0,
+    "n_questions": 8,
+    "samples_per_question": 50,
+    "provenance": "cluster run of sbatch/02_gate1.sbatch + 08_judge.sbatch; log on the cluster, counts reported by the human"
+  },
+  "grid": [
+    1,
+    10,
+    40,
+    80,
+    120,
+    150,
+    170,
+    180,
+    190,
+    200,
+    210,
+    230,
+    260,
+    300,
+    375,
+    500,
+    650,
+    792
+  ],
+  "seed": 0,
+  "reps": 1000,
+  "clustering": {
+    "wilson_on_400": {
+      "lo": 0.019089659086961887,
+      "hi": 0.054804659873739545,
+      "half_width_pp": 1.7857500393388828
+    },
+    "cluster_bootstrap": [
+      {
+        "concentration": "all 8 questions equally",
+        "questions_with_events": 8,
+        "cluster_ci_lo": 0.0175,
+        "cluster_ci_hi": 0.05,
+        "half_width_pp": 1.625,
+        "design_effect": 0.8280668405101715,
+        "effective_n": 483.0527928802948
+      },
+      {
+        "concentration": "4 of 8 questions",
+        "questions_with_events": 4,
+        "cluster_ci_lo": 0.0075,
+        "cluster_ci_hi": 0.0625,
+        "half_width_pp": 2.75,
+        "design_effect": 2.3715050343604913,
+        "effective_n": 168.66926032390458
+      },
+      {
+        "concentration": "2 of 8 questions",
+        "questions_with_events": 2,
+        "cluster_ci_lo": 0.0,
+        "cluster_ci_hi": 0.08,
+        "half_width_pp": 4.0,
+        "design_effect": 5.017399080961039,
+        "effective_n": 79.72258007497054
+      },
+      {
+        "concentration": "1 of 8 questions",
+        "questions_with_events": 1,
+        "cluster_ci_lo": 0.0,
+        "cluster_ci_hi": 0.1075,
+        "half_width_pp": 5.375,
+        "design_effect": 9.059737207711875,
+        "effective_n": 44.15139102042717
+      }
+    ]
+  },
+  "changepoint": [
+    {
+      "design": "18 ckpt x n=25  (current plan)",
+      "outcome": "broad @ measured 3.3%",
+      "cost_generations": 3600,
+      "n_per_checkpoint": 200,
+      "expected_events_at_plateau": 6.5,
+      "frac_runs_with_zero_events": 0.0,
+      "changepoint_sd_steps": 10.631669671316917,
+      "changepoint_iqr_steps": 10.0,
+      "changepoint_bias_steps": 1.259999999999991
+    },
+    {
+      "design": "18 ckpt x n=25  (current plan)",
+      "outcome": "narrow @ assumed 50%",
+      "cost_generations": 3600,
+      "n_per_checkpoint": 200,
+      "expected_events_at_plateau": 100.0,
+      "frac_runs_with_zero_events": 0.0,
+      "changepoint_sd_steps": 1.9422667170087637,
+      "changepoint_iqr_steps": 0.0,
+      "changepoint_bias_steps": 0.2400000000000091
+    },
+    {
+      "design": "18 ckpt x n=15  (lever ii)",
+      "outcome": "broad @ measured 3.3%",
+      "cost_generations": 2160,
+      "n_per_checkpoint": 120,
+      "expected_events_at_plateau": 3.9000000000000004,
+      "frac_runs_with_zero_events": 0.0,
+      "changepoint_sd_steps": 13.888980344143336,
+      "changepoint_iqr_steps": 10.0,
+      "changepoint_bias_steps": 2.0349999999999966
+    },
+    {
+      "design": "18 ckpt x n=15  (lever ii)",
+      "outcome": "narrow @ assumed 50%",
+      "cost_generations": 2160,
+      "n_per_checkpoint": 120,
+      "expected_events_at_plateau": 60.0,
+      "frac_runs_with_zero_events": 0.0,
+      "changepoint_sd_steps": 2.4072338897581185,
+      "changepoint_iqr_steps": 0.0,
+      "changepoint_bias_steps": -0.014999999999986358
+    },
+    {
+      "design": "9 ckpt x n=50   (window-focused)",
+      "outcome": "broad @ measured 3.3%",
+      "cost_generations": 4000,
+      "n_per_checkpoint": 400,
+      "expected_events_at_plateau": 13.0,
+      "frac_runs_with_zero_events": 0.0,
+      "changepoint_sd_steps": 7.607259690585039,
+      "changepoint_iqr_steps": 10.0,
+      "changepoint_bias_steps": 0.36000000000001364
+    },
+    {
+      "design": "9 ckpt x n=50   (window-focused)",
+      "outcome": "narrow @ assumed 50%",
+      "cost_generations": 4000,
+      "n_per_checkpoint": 400,
+      "expected_events_at_plateau": 200.0,
+      "frac_runs_with_zero_events": 0.0,
+      "changepoint_sd_steps": 0.8061637550770935,
+      "changepoint_iqr_steps": 0.0,
+      "changepoint_bias_steps": 0.009999999999990905
+    },
+    {
+      "design": "9 ckpt x n=100  (window, 2x cost)",
+      "outcome": "broad @ measured 3.3%",
+      "cost_generations": 8000,
+      "n_per_checkpoint": 800,
+      "expected_events_at_plateau": 26.0,
+      "frac_runs_with_zero_events": 0.0,
+      "changepoint_sd_steps": 5.398867936891955,
+      "changepoint_iqr_steps": 10.0,
+      "changepoint_bias_steps": 0.16499999999999204
+    },
+    {
+      "design": "9 ckpt x n=100  (window, 2x cost)",
+      "outcome": "narrow @ assumed 50%",
+      "cost_generations": 8000,
+      "n_per_checkpoint": 800,
+      "expected_events_at_plateau": 400.0,
+      "frac_runs_with_zero_events": 0.0,
+      "changepoint_sd_steps": 0.0,
+      "changepoint_iqr_steps": 0.0,
+      "changepoint_bias_steps": 0.0
+    }
+  ],
+  "ordering_power": [
+    {
+      "design": "18 ckpt x n=25  (current plan)",
+      "true_gap_steps": 20,
+      "sd_of_gap_steps": 10.807626936566601,
+      "power": 0.4564901368020229
+    },
+    {
+      "design": "18 ckpt x n=25  (current plan)",
+      "true_gap_steps": 50,
+      "sd_of_gap_steps": 10.807626936566601,
+      "power": 0.9961661517979228
+    },
+    {
+      "design": "18 ckpt x n=25  (current plan)",
+      "true_gap_steps": 100,
+      "sd_of_gap_steps": 10.807626936566601,
+      "power": 0.9999999999998481
+    },
+    {
+      "design": "18 ckpt x n=25  (current plan)",
+      "true_gap_steps": 200,
+      "sd_of_gap_steps": 10.807626936566601,
+      "power": 1.0
+    },
+    {
+      "design": "18 ckpt x n=15  (lever ii)",
+      "true_gap_steps": 20,
+      "sd_of_gap_steps": 14.096047318308774,
+      "power": 0.2945617432004039
+    },
+    {
+      "design": "18 ckpt x n=15  (lever ii)",
+      "true_gap_steps": 50,
+      "sd_of_gap_steps": 14.096047318308774,
+      "power": 0.9437543008465765
+    },
+    {
+      "design": "18 ckpt x n=15  (lever ii)",
+      "true_gap_steps": 100,
+      "sd_of_gap_steps": 14.096047318308774,
+      "power": 0.9999998583171101
+    },
+    {
+      "design": "18 ckpt x n=15  (lever ii)",
+      "true_gap_steps": 200,
+      "sd_of_gap_steps": 14.096047318308774,
+      "power": 1.0
+    },
+    {
+      "design": "9 ckpt x n=50   (window-focused)",
+      "true_gap_steps": 20,
+      "sd_of_gap_steps": 7.6498562077989405,
+      "power": 0.7435844106481618
+    },
+    {
+      "design": "9 ckpt x n=50   (window-focused)",
+      "true_gap_steps": 50,
+      "sd_of_gap_steps": 7.6498562077989405,
+      "power": 0.999997631046064
+    },
+    {
+      "design": "9 ckpt x n=50   (window-focused)",
+      "true_gap_steps": 100,
+      "sd_of_gap_steps": 7.6498562077989405,
+      "power": 1.0
+    },
+    {
+      "design": "9 ckpt x n=50   (window-focused)",
+      "true_gap_steps": 200,
+      "sd_of_gap_steps": 7.6498562077989405,
+      "power": 1.0
+    },
+    {
+      "design": "9 ckpt x n=100  (window, 2x cost)",
+      "true_gap_steps": 20,
+      "sd_of_gap_steps": 5.398867936891955,
+      "power": 0.9594623219430776
+    },
+    {
+      "design": "9 ckpt x n=100  (window, 2x cost)",
+      "true_gap_steps": 50,
+      "sd_of_gap_steps": 5.398867936891955,
+      "power": 0.9999999999998574
+    },
+    {
+      "design": "9 ckpt x n=100  (window, 2x cost)",
+      "true_gap_steps": 100,
+      "sd_of_gap_steps": 5.398867936891955,
+      "power": 1.0
+    },
+    {
+      "design": "9 ckpt x n=100  (window, 2x cost)",
+      "true_gap_steps": 200,
+      "sd_of_gap_steps": 5.398867936891955,
+      "power": 1.0
+    }
+  ],
+  "what_buys_power": {
+    "threshold_sensitivity": [
+      {
+        "plateau_rate": 0.0325,
+        "n_per_checkpoint": 200,
+        "expected_events": 6.5,
+        "min_events_for_p<0.05_vs_zero": 5,
+        "power_vs_zero_baseline": 0.77875
+      },
+      {
+        "plateau_rate": 0.05,
+        "n_per_checkpoint": 200,
+        "expected_events": 10.0,
+        "min_events_for_p<0.05_vs_zero": 5,
+        "power_vs_zero_baseline": 0.97175
+      },
+      {
+        "plateau_rate": 0.08,
+        "n_per_checkpoint": 200,
+        "expected_events": 16.0,
+        "min_events_for_p<0.05_vs_zero": 5,
+        "power_vs_zero_baseline": 1.0
+      },
+      {
+        "plateau_rate": 0.12,
+        "n_per_checkpoint": 200,
+        "expected_events": 24.0,
+        "min_events_for_p<0.05_vs_zero": 5,
+        "power_vs_zero_baseline": 1.0
+      },
+      {
+        "plateau_rate": 0.2,
+        "n_per_checkpoint": 200,
+        "expected_events": 40.0,
+        "min_events_for_p<0.05_vs_zero": 5,
+        "power_vs_zero_baseline": 1.0
+      }
+    ],
+    "paired_continuous": [
+      {
+        "effect_size_question_sds": 0.3,
+        "n_questions": 8,
+        "power_paired_t_two_sided_0.05": 0.10525
+      },
+      {
+        "effect_size_question_sds": 0.5,
+        "n_questions": 8,
+        "power_paired_t_two_sided_0.05": 0.23325
+      },
+      {
+        "effect_size_question_sds": 0.8,
+        "n_questions": 8,
+        "power_paired_t_two_sided_0.05": 0.5055
+      },
+      {
+        "effect_size_question_sds": 1.0,
+        "n_questions": 8,
+        "power_paired_t_two_sided_0.05": 0.68175
+      },
+      {
+        "effect_size_question_sds": 1.5,
+        "n_questions": 8,
+        "power_paired_t_two_sided_0.05": 0.9535
+      }
+    ]
+  },
+  "clustering_two_roles": [
+    {
+      "concentration": "events spread over 8 questions",
+      "questions_hot": 8,
+      "changepoint_sd_steps": 9.568826665270931,
+      "frac_runs_with_zero_events": 0.0
+    },
+    {
+      "concentration": "events in 4 of 8 questions",
+      "questions_hot": 4,
+      "changepoint_sd_steps": 9.077091701090168,
+      "frac_runs_with_zero_events": 0.0
+    },
+    {
+      "concentration": "events in 2 of 8 questions",
+      "questions_hot": 2,
+      "changepoint_sd_steps": 8.622876187792563,
+      "frac_runs_with_zero_events": 0.0
+    }
+  ],
+  "misspecification": [
+    {
+      "true_width_steps": 5.0,
+      "changepoint_sd_steps": 5.963639828158639,
+      "changepoint_bias_steps": 1.9000000000000057
+    },
+    {
+      "true_width_steps": 10.0,
+      "changepoint_sd_steps": 10.130368946884413,
+      "changepoint_bias_steps": 0.7750000000000057
+    },
+    {
+      "true_width_steps": 40.0,
+      "changepoint_sd_steps": 29.825123218521664,
+      "changepoint_bias_steps": -0.5449999999999875
+    },
+    {
+      "true_width_steps": 100.0,
+      "changepoint_sd_steps": 51.39197310864801,
+      "changepoint_bias_steps": -29.49000000000001
+    },
+    {
+      "true_width_steps": 200.0,
+      "changepoint_sd_steps": 58.511844741043674,
+      "changepoint_bias_steps": -111.905
+    }
+  ],
+  "gate1_continuous_calibration": {
+    "paired_shift_final": [
+      2.72,
+      8.47,
+      8.88,
+      13.26,
+      11.39,
+      0.94,
+      3.55,
+      0.57
+    ],
+    "within_question_sd": 14.22,
+    "provenance": "computed from results/gate1_responses.jsonl by src/gate1_summary.py"
+  },
+  "continuous_changepoint": [
+    {
+      "design": "18 ckpt x n=25  (current plan)",
+      "outcome": "paired continuous shift",
+      "cost_generations": 3600,
+      "se_of_checkpoint_statistic": 1.0055058428472705,
+      "changepoint_sd_steps": 5.3438726594109625,
+      "changepoint_bias_steps": 0.05500000000000682
+    },
+    {
+      "design": "18 ckpt x n=15  (lever ii)",
+      "outcome": "paired continuous shift",
+      "cost_generations": 2160,
+      "se_of_checkpoint_statistic": 1.2981024612872436,
+      "changepoint_sd_steps": 7.080402530930004,
+      "changepoint_bias_steps": 0.22999999999998977
+    },
+    {
+      "design": "9 ckpt x n=50   (window-focused)",
+      "outcome": "paired continuous shift",
+      "cost_generations": 4000,
+      "se_of_checkpoint_statistic": 0.7109999999999999,
+      "changepoint_sd_steps": 3.996595426109578,
+      "changepoint_bias_steps": 0.16499999999999204
+    }
+  ],
+  "note": "design calculation on a measured endpoint rate; contains no new measurement of the models"
+}
