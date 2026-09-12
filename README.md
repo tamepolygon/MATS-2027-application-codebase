@@ -1,6 +1,6 @@
 # There is no single misalignment direction, and forcing a rank-1 EM LoRA onto one produces no misalignment 
 
-MATS Winter 2027 application project. Writeup: [link]
+MATS Winter 2027 application project.
 
 ## Layout
 - `RESULTS.md` — full results, findings first
